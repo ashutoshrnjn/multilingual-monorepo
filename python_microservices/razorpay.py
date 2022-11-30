@@ -6,7 +6,7 @@ from hashlib import sha256
 
 from fastapi import APIRouter, HTTPException, Request
 
-from .model import PaymentCreation, PaymentVerificationResponse
+from model import PaymentCreation, PaymentVerificationResponse
 
 router = APIRouter()
 

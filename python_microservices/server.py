@@ -1,11 +1,11 @@
 """ system module for fastapi endpoints """
 import os
 
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.openapi.docs import get_swagger_ui_html
 
-from src.docker_containers import razorpay
+import razorpay
 
 app = FastAPI(
     title="Palavv FastAPI Microservices",

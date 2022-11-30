@@ -1,0 +1,22 @@
+service: my-service
+
+provider:
+  name: aws
+  runtime: go1.x
+  stage: dev
+  region: us-east-1
+
+functions:
+  go_function:
+    handler: go/main
+    events:
+      - http:
+          path: /go
+          method: post
+  python_function:
+    handler: python/main.py
+    runtime: python3.8
+    events:
+      - http:
+          path: /python
+          method: post
