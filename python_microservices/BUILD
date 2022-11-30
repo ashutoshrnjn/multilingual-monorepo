@@ -3,7 +3,8 @@ load("@py_deps//:requirements.bzl", "requirement")
 MAIN_SRCS = glob(["*.py"])
 
 MAIN_DEPS = [
-    requirement("click"),
+    requirement("fastapi"),
+    requirement("uvicorn"),
 ]
 
 py_binary(
