@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "serverless_backend_containers"
+version = "0.1.0"
+description = ""
+authors = ["Aarif1430 <malikarif13@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+fastapi = "^0.87.0"
+
+[tool.poetry.dev-dependencies]
+coverage = {extras = ["toml"], version = "^6.2"}
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
