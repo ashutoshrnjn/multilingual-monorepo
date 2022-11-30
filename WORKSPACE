@@ -29,39 +29,6 @@ pip_install(
     python_interpreter_target=python_interpreter,
     requirements="//3rdparty:requirements.txt",
 )
-
-# MYPY SUPPORT
-mypy_integration_version = "0.2.0"  # Latest @ 26th June 2021
-
-http_archive(
-    name="mypy_integration",
-    sha256="621df076709dc72809add1f5fe187b213fee5f9b92e39eb33851ab13487bd67d",
-    strip_prefix="bazel-mypy-integration-{version}".format(
-        version=mypy_integration_version),
-    urls=[
-        "https://github.com/thundergolfer/bazel-mypy-integration/archive/refs/tags/{version}.tar.gz".format(
-            version=mypy_integration_version),
-    ],
-)
-
-load(
-    "@mypy_integration//repositories:repositories.bzl",
-    mypy_integration_repositories="repositories",
-)
-
-mypy_integration_repositories()
-
-load("@mypy_integration//:config.bzl", "mypy_configuration")
-
-mypy_configuration("//tools/typing:mypy.ini")
-
-load("@mypy_integration//repositories:deps.bzl", mypy_integration_deps="deps")
-
-mypy_integration_deps(
-    "//tools/typing:mypy_version.txt",
-    python_interpreter_target=python_interpreter,
-)
-
 # Go dependencies
 rules_go_version = "v0.27.0"  # latest @ 2021/05/23
 

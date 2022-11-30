@@ -63,7 +63,7 @@ go_binary(
 Finally, you can use Bazel or Buck to build your projects and manage their dependencies. For example, to build the Go project, you could run the following command from the root of the monorepo:
 
 ```bash
-bazel build //go:go_project
+bazel build //golang_restapi:golang_restapi
 ```
 
 ## python golang monrepo folder structure
