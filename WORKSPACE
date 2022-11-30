@@ -29,6 +29,7 @@ pip_install(
     python_interpreter_target=python_interpreter,
     requirements="//3rdparty:requirements.txt",
 )
+
 # Go dependencies
 rules_go_version = "v0.27.0"  # latest @ 2021/05/23
 
